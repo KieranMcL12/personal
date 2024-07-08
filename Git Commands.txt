@@ -1,0 +1,8 @@
+git status
+git init
+git add .
+git reset
+
+0 git status
+1 git add
+2 git commit -m "msg"
