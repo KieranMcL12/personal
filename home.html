@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Kieran M</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="js/script.js"></script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        html,
+        body {
+            font-family: 'Google Sans', Arial, Helvetica, sans-serif;
+        }
+
+        a {
+            color: darkgray;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:not(.active):hover {
+            color: gray;
+        }
+
+        a.active {
+            color: black;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
+        nav ul {
+            margin-left: 0;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline-block;
+            padding: 0 7px;
+            position: relative;
+        }
+
+        nav ul li:not(:last-child)::after {
+            content: "";
+            border: 1px solid #e2e2e2;
+            border-width: 1px 1px 0 0;
+            position: absolute;
+            right: -3px;
+            top: 0;
+            height: 100%;
+        }
+
+        code {
+            color: blue;
+        }
+
+        code span {
+            color: orangered;
+        }
+
+        dl {
+            margin-top: 0;
+            margin-bottom: 2px;
+            text-indent: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 style="margin-bottom: 0; font-weight: 600;">Kieran M</h1>
+        <h3 style="margin-top: 0; font-weight: 400; color: darkgray;">WPI Frontiers Program</h3>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="#terminal-commands">Commands</a></li>
+                <li><a href="#">Site 3</a></li>
+                <li><a href="#">Site 4</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <br>
+
+    <div id="terminal-commands">
+        <h2>Terminal Commands</h2>
+        <ul>
+            <li><code>pwd</code></li>
+            <dl><small>(Print Working Directory)</small></dl>
+            <li><code>ls <span>-a</span></code></li>
+            <li><code>cd <span>folder</span></code></li>
+            <dl><small>Puts you in the specified folder</small></dl>
+            <li><code>cd <span>documents/</span></code></li>
+            <dl><small>Puts you in the "Documents" folder</small></dl>
+            <li><code>cd <span>/z</span></code></li>
+            <dl><small>Puts you in the "c" drive</small></dl>
+            <li><code>cd <span>..</span></code></li>
+            <dl><small>Sends you back</small></dl>
+            <li><code>mkdir <span>folder name</span></code></li>
+            <dl><small>Makes a new directory/folder</small></dl>
+            <li><code><span>~/</span> user folder <span>(aka /c/users/username)</span></code></li>
+            <li><code><span>/</span> root</code></li>
+            <li><code><span>./</span> current directory</code></li>
+            <li><code><span>../</span> enclosing directory</code></li>
+            <li><code>touch <span>file.txt</span></code></li>
+            <dl><small>Makes a new file</small></dl>
+            <li><code>which <span>command</span></code></li>
+            <li><code>nano <span>file.txt</span></code></li>
+            <li><code>cat <span>file.txt</span></code></li>
+            <dl><small>Prints the text</small></dl>
+            <li><code>mv <span>/folder name/file.txt ./</span></code></li>
+            <dl><small>Moves a file from the origin to a new destination</small></dl>
+            <li><code>mv <span>/file.txt/newfile.txt</span></code></li>
+            <li><code>mv <span>/file.txt/newname.js</span></code></li>
+            <dl><small>Renames a file and/or its file extension</small></dl>
+            <li><code>cp <span>/newname.js/newfile.txt</span></code></li>
+            <dl><small>Renames a file and/or its file extension</small></dl>
+        </ul>
+    </div>
+</body>
+
+</html>
