@@ -1,0 +1,49 @@
+body {
+    background-color: #131417;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-family: 'katahdin_roundbold';
+}
+
+#mybox {
+    width: 150px;
+    height: 150px;
+    border: 1.5px solid #666B71;
+    border-radius: 5px;
+    position: relative;
+}
+
+#robot {
+    background-color: #222221;
+    border: 1px solid #404040;
+    border-radius: 5px;
+    position: absolute;
+    animation: swim 1.5s infinite ease-in-out alternate;
+}
+
+@keyframes swim {
+    0% {
+        left: 0%;
+        top: 0%;
+        width: 15px;
+        height: 20px;
+    }
+
+    50% {
+        left: 50%;
+        top: 50%;
+        width: 25px;
+        height: 30px;
+        background-color: #666B71;
+    }
+
+    100% {
+        left: 89%;
+        top: 0%;
+        width: 15px;
+        height: 20px;
+    }
+}
