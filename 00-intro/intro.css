@@ -1,0 +1,23 @@
+body {
+	background-color: #131417;
+	color: #fff;
+	transition: all 0.75s ease;
+	font-family: sans-serif;
+}
+
+input {
+	background-color: transparent;
+	border: 1px solid darkgray;
+	border-radius: 5px;
+}
+
+#click-button {
+	background-color: #00ff7f;
+	border: none;
+	border-radius: 5px;
+	padding: 5px;
+	font-weight: 600;
+	font-family: sans-serif;
+	margin: 10px 0 0 0;
+	cursor: pointer;
+}
