@@ -9,6 +9,9 @@ input {
 	background-color: transparent;
 	border: 1px solid darkgray;
 	border-radius: 5px;
+	padding: 2px;
+	color: #fff;
+	text-transform: capitalize;
 }
 
 #click-button {

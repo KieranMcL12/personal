@@ -13,15 +13,16 @@ var rgbValue;
 function submit() {
     console.log(colorField.value);
     document.body.style.backgroundColor = colorField.value;
-    // if (colorField.value == 'red' || colorField.value == 'orange' || colorField.value == 'yellow') {
-    //     document.body.style.color = '#000';
-    // } else {
-    //     document.body.style.color = "#fff";
-    // }
     convertRun();
     setColor();
-    console.log(fontSizeField.value);
     text.style.fontSize = fontSizeField.value + 'px';
+}
+
+function reset() {
+    document.body.style.backgroundColor = "";
+    document.body.style.color = "";
+    fontSizeField.style.color = "";
+    text.style.fontSize = "";
 }
 
 function convert(color) {
@@ -216,10 +217,9 @@ function setColor() {
         (parseInt(rgbValue[1]) * 587) + 
         (parseInt(rgbValue[2]) * 114)) / 1000); 
     var textColor = (color > 125) ? 'black' : 'white'; 
-    var backColor = 
-        'rgb(' + rgbValue[0] + ', ' + rgbValue[1] + ', ' 
-    + rgbValue[2] + ')'; 
+    var backColor = 'rgb(' + rgbValue[0] + ', ' + rgbValue[1] + ', ' + rgbValue[2] + ')'; 
       
     document.body.style.color = textColor;
+    fontSizeField.style.color = textColor;
     document.body.style.backgroundColor = backColor;
 }
