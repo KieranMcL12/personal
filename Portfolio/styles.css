@@ -89,6 +89,15 @@ div#tswheader {
 div#tswfooter {
 	color: #CCCCCC;
 	background-color: #2D2D2D;
+	position: absolute;
+	width: 100%;
+	text-align: center;
+}
+
+#tswfooter .social a {
+	/* display: flex; */
+	justify-content: center;
+	color: #fff;
 }
 
 .town-img {
