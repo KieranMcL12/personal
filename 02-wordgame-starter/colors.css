@@ -1,0 +1,326 @@
+:root {
+    --black: #000;
+    --white: #fff;
+    --clear: transparent;
+    --wordleBlack: #212121;
+    --wordleBlack2: #272729;
+    --wordleBlack3: #1a1a1b;
+    --wordleBlack4: #121213;
+    --wordleBlack5: #2f2f31;
+
+    --blue1: #083aaa;
+    --blue2: #2860d8;
+    --blue3: #4f85e5;
+    --blue35: #5aa0d5;
+    --blue4: #a7d8ff;
+    --blue5: #dcefff;
+    --blue7: #477aaa;
+    --newsLightContentAccent: #346eb7;
+    --newsDarkContentAccent: #6ba1dd;
+    --purple1: #5960ec;
+    --outlineBlue: #2671dc;
+
+    --error-red: #ce2424;
+
+    --gray1: #333;
+    --gray2: #959595;
+    --gray3: #ccc;
+    --gray4: #dcdcdc;
+    --gray5: #e6e6e6;
+    --gray6: #f4f4f4;
+    --gray7: #fafafa;
+    --gray8: #c4c4c4;
+    --gray9: #c2c2c2;
+    --gray10: #d9d9d9;
+    --gray11: #eee;
+    --gray12: #ebebeb;
+    --calendarGray: #979797;
+
+    /* Grays used in Wordle */
+    --gray13: #d3d6da;
+    --gray18: #787c7e;
+    --gray19: #878a8c;
+    --gray20: #edeff1;
+    --gray21: #f6f7f8;
+    --gray22: #e3e3e1;
+    --gray23: #a6a6a6;
+    --gray24: #818384;
+    --gray25: #565758;
+    --gray26: #3a3a3c;
+    --gray27: #424242;
+    --gray28: #59595a;
+    --gray29: #afafaf;
+
+    --newsGray10: #dfdfdf;
+    --newsGray25: #c7c7c7;
+    --newsGray50: #8b8b8b;
+    --newsGray60: #727272;
+    --newsGray85: #363636;
+    --newsGray100: #121212;
+
+    --newsDarkContentPrimary: #f8f8f8;
+
+    --blueGray1: #787886;
+    --blueGray2: #e4eaef;
+    --blueGray3: #ecf0f3;
+    --blueGray4: #c9d1d9;
+    --blueGray5: #b3bdc4;
+
+    --gold1: #c4a200;
+    --gold2: #e2c32f;
+    --gold3: #dcbc3f;
+    --gold4: #e2c400;
+
+    --yellow1: #ffda00;
+    --yellow2: #ffeca0;
+    --yellow3: #c9b458;
+    --yellow4: #b59f3b;
+
+    --red1: #e63333;
+    --red2: #e05c56;
+
+    --green1: #6dc3a1;
+    --green4: #538d4e;
+
+    --statsPink: #f93aa7;
+    --statsYellow: #ffc600;
+
+    --spelling-bee-yellow: #f8cd05;
+    --letter-boxed-pink: #faa6a4;
+    --vertex-tan: #f7f5f6;
+    --vertex-gradient: linear-gradient(180deg,
+            #22bbb2 0%,
+            #297ea8 30%,
+            #1c4761 100%);
+    --bannerBlue: #4d88f9;
+    --setPurple: #89529d;
+    --setPurpleDark: #641153;
+
+    /* Navigation */
+    --daily-crossword-blue: #6493e6;
+    --mini-crossword-blue: #95befa;
+    --spelling-bee-gold: #f7da21;
+    --tiles-green: #b5e352;
+    --letter-boxed-red: #fc716b;
+    --vertex-turquoise: #00a2b3;
+    --sudoku-orange: #fb9b00;
+    --wordleGreen: #6aaa64;
+    --strands-seafoam: #c0ddd9;
+    --connections-periwinkle: #b4a8ff;
+
+    /* Wordle Colorblind colors */
+    --wordleColorblindOrange: #f5793a;
+    --wordleColorblindBlue: #85c0f9;
+    --wordleHighContrastGreen: #58a351;
+}
+
+/* Global Colors */
+:root {
+    --green: var(--wordleGreen);
+    --green-4: var(--green4);
+    --beta-blue: var(--blue3);
+    --wordle-high-contrast-green: var(--wordleHighContrastGreen);
+
+    --spellingBeeYellow: var(--spelling-bee-gold);
+    --miniCrosswordBlue: var(--mini-crossword-blue);
+    --connectionsPeriwinkle: var(--connections-periwinkle);
+    --sudoku-orange: var(--sudoku-orange);
+    --tiles-green: var(--tiles-green);
+    --dailyCrosswordBlue: var(--daily-crossword-blue);
+    --yellow-3: var(--yellow3);
+    --yellow-4: var(--yellow4);
+
+    --newsGray-10: var(--newsGray10);
+    --newsGray-100: var(--newsGray100);
+    --newsGray-85: var(--newsGray85);
+
+    --gray-3: var(--gray3);
+    --gray-4: var(--gray4);
+    --gray-6: var(--gray6);
+    /* f4 */
+    --gray-13: var(--gray13);
+    --gray-18: var(--gray18);
+    --gray-19: var(--gray19);
+    --gray-20: var(--gray20);
+    --gray-21: var(--gray21);
+    --gray-22: var(--gray22);
+    --gray-23: var(--gray23);
+    --gray-24: var(--gray24);
+    --gray-25: var(--gray25);
+    --gray-26: var(--gray26);
+    --gray-27: var(--gray27);
+    --gray-28: var(--gray28);
+    --gray-29: var(--gray29);
+
+    --black: var(--black);
+    --white: var(--white);
+    --newsDarkContentPrimary: var(--newsDarkContentPrimary);
+    --wordleBlack: var(--wordleBlack);
+    --wordleBlack-2: var(--wordleBlack2);
+    --wordleBlack-3: var(--wordleBlack3);
+    --wordleBlack-4: var(--wordleBlack4);
+    --wordleBlack-5: var(--wordleBlack5);
+
+    --linkBlue: var(--newsLightContentAccent);
+    --linkDarkBlue: var(--newsDarkContentAccent);
+
+    /* Colorblind colors */
+    --orange: var(--wordleColorblindOrange);
+    --blue: var(--wordleColorblindBlue);
+    --outlineBlue: var(--outlineBlue);
+
+    /* sb-promo */
+    --svg-arrow-fill: var(--white);
+    --svg-arrow-stroke: var(--black);
+    --svg-arrow-fill-hover: var(--black);
+    --svg-arrow-stroke-hover: var(--white);
+}
+
+/* Light theme colors */
+:root {
+    --color-tone-1: var(--black);
+    --color-tone-2: var(--gray-18);
+    --color-tone-3: var(--gray-19);
+    --color-tone-4: var(--gray-13);
+    --color-tone-5: var(--gray-20);
+    --color-tone-6: var(--gray-21);
+    --color-tone-7: var(--white);
+    --color-tone-8: var(--newsGray-100);
+    --color-tone-9: var(--newsGray-10);
+    --color-tone-10: var(--black);
+    --color-tone-11: var(--gray-18);
+    --color-tone-12: var(--newsGray-85);
+
+    --color-nav-hover: var(--gray-6);
+    --opacity-50: rgba(255, 255, 255, 0.5);
+    --error-background: var(--gray-22);
+    --icon-disabled: var(--gray-23);
+    --background-gray: var(--gray-29);
+
+    --inline-links: var(--linkBlue);
+
+    /* stats selection tool */
+    --warning-red: #d0021b;
+}
+
+/* Dark Theme Colors */
+.dark {
+    --color-tone-1: var(--newsDarkContentPrimary);
+    --color-tone-2: var(--gray-24);
+    --color-tone-3: var(--gray-25);
+    --color-tone-4: var(--gray-26);
+    --color-tone-5: var(--wordleBlack-2);
+    --color-tone-6: var(--wordleBlack-3);
+    --color-tone-7: var(--wordleBlack-4);
+    --color-tone-8: var(--newsDarkContentPrimary);
+    --color-tone-9: var(--gray-27);
+    --color-tone-10: var(--newsGray-10);
+    --color-tone-11: var(--newsGray-10);
+    --color-tone-12: var(--newsGray-10);
+    --color-nav-hover: var(--wordleBlack-5);
+    --opacity-50: rgba(0, 0, 0, 0.5);
+    --error-background: var(--color-tone-7);
+    --icon-disabled: var(--gray-28);
+
+    /* dark mode sb-promo */
+    --svg-arrow-fill: var(--black);
+    --svg-arrow-stroke: var(--white);
+    --svg-arrow-fill-hover: var(--white);
+    --svg-arrow-stroke-hover: var(--black);
+
+    --inline-links: var(--linkDarkBlue);
+
+    /* stats selection tool */
+    --warning-red: #ea7980;
+}
+
+/* Constant colors and colors derived from theme */
+:root,
+.dark {
+    --color-background: var(--color-tone-7);
+}
+
+:root {
+    /* Tile + text colors */
+    --color-present: var(--yellow-3);
+    --color-correct: var(--green);
+    --color-absent: var(--color-tone-2);
+    --tile-text-color: var(--color-tone-7);
+    --key-text-color: var(--color-tone-1);
+
+    /* Key colors */
+    --key-evaluated-text-color: var(--color-tone-7);
+    --key-bg: var(--color-tone-4);
+    --key-bg-present: var(--color-present);
+    --key-bg-correct: var(--color-correct);
+    --key-bg-absent: var(--color-absent);
+
+    /* Evaluated key text colors */
+    --key-evaluated-text-color: var(--color-tone-7);
+    --key-evaluated-text-color-absent: var(--white);
+
+    /* misc */
+    --modal-content-bg: var(--color-tone-7);
+    --outline-focus: var(--outlineBlue);
+
+    /* high contrast green only used in stats modal, for now */
+    --color-correct-high-contrast: var(--wordle-high-contrast-green);
+}
+
+.dark {
+    /* Tile + text colors - dark */
+    --modal-content-bg: var(--color-tone-7);
+    --outline-focus: var(--outlineBlue);
+}
+
+.dark {
+    /* Tile + text colors - dark */
+    --color-present: var(--yellow-4);
+    --color-correct: var(--green-4);
+    --color-absent: var(--color-tone-4);
+    --tile-text-color: var(--color-tone-1);
+    --key-text-color: var(--color-tone-1);
+
+    /* Key colors - dark */
+    --key-evaluated-text-color: var(--color-tone-1);
+    --key-bg: var(--color-tone-2);
+    --key-bg-present: var(--color-present);
+    --key-bg-correct: var(--color-correct);
+    --key-bg-absent: var(--color-absent);
+
+    /* Evaluated key text colors - dark */
+    --key-evaluated-text-color: var(--color-tone-8);
+    --key-evaluated-text-color-absent: var(--white);
+
+    /* misc */
+    --modal-content-bg: var(--color-tone-7);
+
+    /* If you have both dark + colorblind mode on */
+    &.colorblind {
+        --color-absent: var(--color-tone-4);
+        --key-bg-absent: var(--color-tone-4);
+    }
+}
+
+.colorblind {
+    /* Tile + text colors - colorblind */
+    --color-correct: var(--orange);
+    --color-present: var(--blue);
+    --color-absent: var(--color-tone-2);
+    --tile-text-color: var(--white);
+
+    /* Key colors - colorblind */
+    --key-bg-present: var(--color-present);
+    --key-bg-correct: var(--color-correct);
+    --key-bg-absent: var(--color-tone-2);
+
+    /* Evaluated key text colors - colorblind */
+    --key-evaluated-text-color: var(--black);
+    --key-evaluated-text-color-absent: var(--white);
+
+    /* corresponding color for high contrast green in stats modal */
+    --color-correct-high-contrast: var(--orange);
+
+    /* misc */
+    --modal-content-bg: var(--color-tone-7);
+}
