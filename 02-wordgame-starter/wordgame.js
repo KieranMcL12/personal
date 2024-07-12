@@ -10,6 +10,9 @@ function randInt(min, max) {
     return rand;
 }
 
+const guessCount = document.getElementById('guess-count');
+let guessesLeft = 6;
+
 function loadGame() {
     fetch('./words_dictionary.json')
         .then(response => response.text())
@@ -22,11 +25,17 @@ function loadGame() {
         .catch(error => {
             console.error('Error fetching words: ', error);
         });
+
+    guessCount.innerHTML = guessesLeft;
 }
 
 const randomWord = document.getElementById("random-word");
+const guessField = document.getElementsByClassName("guess-field");
+const feedbackText = document.getElementById("snackbar");
+
 let allWords = [];
 let fiveLetterWords = [];
+let secret = '';
 
 function wordsLoaded() {
     allWords = Object.keys(json);
@@ -36,13 +45,37 @@ function wordsLoaded() {
     for (let i = 0; i < allWords.length; i++) {
         let word = allWords[i];
         if (word.length != 5) continue;
-        fiveLetterWords.push(allWords[i]);
+        fiveLetterWords.push(word);
     }
 
     randomIndex = randInt(0, fiveLetterWords.length - 1);
     secret = fiveLetterWords[randomIndex];
+}
 
-    // console.log("All done!");
+function changeGuess() {
+    let guess = guessField.value;
+    if (guess.length < 5) return;
+    if (guess.length > 5) {
+        guessField.value = "";
+        return;
+    }
+    console.log(`Guess: "${guess}" and Secret: "${secret}"`);
+    if (json.hasOwnProperty(guess)) {
+        feedbackText.innerHTML = `"${guess}" is not a word.`;
+        feedbackText.className = "show";
+        setTimeout(function () { feedbackText.className = feedbackText.className.replace("show", ""); }, 3000);
+        guessField.value = "";
+        return
+    }
+}
+
+function submit() {
+    guessesLeft -= 1;
+    guessCount.innerHTML = guessesLeft;
+
+    if (guessesLeft == 0) {
+        gameOver();
+    }
 }
 
 // TODO: write function isWord(word)

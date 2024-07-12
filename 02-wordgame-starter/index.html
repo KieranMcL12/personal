@@ -8,12 +8,53 @@
     <link rel="stylesheet" href="wordgame.css">
     <link rel="stylesheet" href="colors.css">
     <link rel="stylesheet" href="typography.css">
+    <link rel="shortcut icon" href="Wordle Logo.png" type="image/x-icon">
 </head>
 
-<body onload="loadGame()">
+<body class="dark" onload="loadGame()">
+    <div id="snackbar"></div>
+
     <h1>WORDLE</h1>
 
     <p>Today's random word is <span id="random-word">LOADING...</span></p>
+
+    <h2>GUESSES: <span id="guess-count"></span></h2>
+
+    <div class="guess-field-div active">
+        <label for="guess1" class="guess-label">GUESS #1:</label>
+        <input type="text" name="guess1" class="guess-field" oninput="changeGuess()">
+        <button type="submit" onclick="submit()">GUESS</button>
+    </div>
+    <div class="guess-field-div">
+        <label for="guess2" class="guess-label">GUESS #2:</label>
+        <input type="text" name="guess2" class="guess-field" oninput="changeGuess()">
+        <button type="submit" onclick="submit()">GUESS</button>
+    </div>
+    <div class="guess-field-div">
+        <label for="guess3" class="guess-label">GUESS #3:</label>
+        <input type="text" name="guess3" class="guess-field" oninput="changeGuess()">
+        <button type="submit" onclick="submit()">GUESS</button>
+    </div>
+    <div class="guess-field-div">
+        <label for="guess3" class="guess-label">GUESS #3:</label>
+        <input type="text" name="guess3" class="guess-field" oninput="changeGuess()">
+        <button type="submit" onclick="submit()">GUESS</button>
+    </div>
+    <div class="guess-field-div">
+        <label for="guess4" class="guess-label">GUESS #4:</label>
+        <input type="text" name="guess4" class="guess-field" oninput="changeGuess()">
+        <button type="submit" onclick="submit()">GUESS</button>
+    </div>
+    <div class="guess-field-div">
+        <label for="guess5" class="guess-label">GUESS #5:</label>
+        <input type="text" name="guess5" class="guess-field" oninput="changeGuess()">
+        <button type="submit" onclick="submit()">GUESS</button>
+    </div>
+    <div class="guess-field-div">
+        <label for="guess6" class="guess-label">GUESS #6:</label>
+        <input type="text" name="guess6" class="guess-field" oninput="changeGuess()">
+        <button type="submit" onclick="submit()">GUESS</button>
+    </div>
     <script src="./wordgame.js"></script>
 </body>
 
