@@ -31,7 +31,8 @@ function loadGame() {
 
 const randomWord = document.getElementById("random-word");
 const guessField = document.getElementsByClassName("guess-field");
-const feedbackText = document.getElementById("snackbar");
+const feedbackText = document.getElementById("feedback");
+const submitButton = document.getElementsByClassName("submit-button");
 
 let allWords = [];
 let fiveLetterWords = [];
@@ -52,6 +53,11 @@ function wordsLoaded() {
     secret = fiveLetterWords[randomIndex];
 }
 
+function isWord(word) {
+    // Check if the word exists as a key in the json object
+    return json.hasOwnProperty(word);
+}
+
 function changeGuess() {
     let guess = guessField.value;
     if (guess.length < 5) return;
@@ -60,22 +66,43 @@ function changeGuess() {
         return;
     }
     console.log(`Guess: "${guess}" and Secret: "${secret}"`);
-    if (json.hasOwnProperty(guess)) {
+    if (!isWord(guess)) {
         feedbackText.innerHTML = `"${guess}" is not a word.`;
-        feedbackText.className = "show";
-        setTimeout(function () { feedbackText.className = feedbackText.className.replace("show", ""); }, 3000);
+        // feedbackText.className = "show";
+        // setTimeout(function () { feedbackText.className = feedbackText.className.replace("show", ""); }, 3000);
         guessField.value = "";
         return
     }
 }
 
 function submit() {
-    guessesLeft -= 1;
-    guessCount.innerHTML = guessesLeft;
+    if (guessField.value === "") {
+        guessCount.innerHTML = guessesLeft;
+    } else {
+        guessesLeft -= 1;
+        guessCount.innerHTML = guessesLeft;
+    }
 
-    if (guessesLeft == 0) {
+    const currentActive = document.querySelector(".active");
+    const nextActive = currentActive.nextElementSibling;
+
+    // Remove active class and styles from previous element
+    if (currentActive) {
+        currentActive.classList.remove("active");
+    }
+
+    // Add active class and styles to clicked element's parent
+    if (nextActive) {
+        nextActive.classList.add("active");
+    }
+
+    if (guessesLeft === 0) {
         gameOver();
     }
+}
+
+function gameOver() {
+    guessCount.style.color = "var(--warning-red)";
 }
 
 // TODO: write function isWord(word)

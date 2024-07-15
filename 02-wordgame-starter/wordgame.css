@@ -3,6 +3,7 @@ body {
     color: white;
     text-align: center;
     font-family: 'Gotham Medium';
+    cursor: default;
 }
 
 h1 {
@@ -15,8 +16,17 @@ h2 {
     font-size: x-large;
 }
 
-.guess-label #random-word {
+.guess-label,
+#random-word {
     font-family: 'Gotham Regular';
+}
+
+#random-word {
+    color: var(--green);
+}
+
+#guess-count {
+    font-family: 'Gotham Medium';
     color: var(--green);
 }
 
@@ -36,11 +46,7 @@ input {
     padding: 5px 10px;
     color: white;
     font-family: 'Gotham Regular';
-}
-
-#guess-count {
-    font-family: 'Gotham Medium';
-    color: var(--green);
+    cursor: default;
 }
 
 .guess-field-div,
@@ -54,57 +60,73 @@ input {
     background-color: var(--key-bg);
 }
 
-.guess-field-div.active,
-.guess-field-div.active button,
-.guess-field-div.active input {
+.active,
+.active button,
+.active input {
     color: white;
     border-color: var(--color-tone-3);
 }
 
-.guess-field-div.active button {
+.active button {
     background-color: var(--green);
     cursor: pointer;
 }
 
-/* The snackbar - position it at the bottom and in the middle of the screen */
-#snackbar {
-    visibility: hidden;
-    /* Hidden by default. Visible on click */
-    min-width: 250px;
-    /* Set a default minimum width */
-    margin-left: -125px;
-    /* Divide value of min-width by 2 */
-    background-color: #f8f8f8;
-    /* Black background color */
-    color: var(--color-tone-7);
-    /* White text color */
-    text-align: center;
-    /* Centered text */
-    border-radius: 5px;
-    /* Rounded borders */
-    padding: 16px;
-    /* Padding */
-    position: fixed;
-    /* Sit on top of the screen */
-    z-index: 999;
-    /* Add a z-index if needed */
-    left: 50%;
-    /* Center the snackbar */
-    bottom: 30px;
-    /* 30px from the bottom */
+.active input {
+    cursor: text;
 }
 
-/* Show the snackbar when clicking on a button (class added with JavaScript) */
+/* New style to remove active class from previous element */
+.submit-button:not(.active)+.guess-field-div.active {
+    /* Remove active styles from previous element */
+    border-color: var(--color-tone-4);
+    color: var(--color-tone-4);
+
+    .active button {
+        background-color: var(--key-bg);
+        /* Reset button background color */
+    }
+}
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+/* #snackbar {
+    visibility: hidden;
+    /* Hidden by default. Visible on click
+    min-width: 250px;
+    /* Set a default minimum width
+    margin-left: -125px;
+    /* Divide value of min-width by 2
+    background-color: #f8f8f8;
+    /* Black background color
+    color: var(--color-tone-7);
+    /* White text color
+    text-align: center;
+    /* Centered text
+    border-radius: 5px;
+    /* Rounded borders
+    padding: 16px;
+    /* Padding
+    position: fixed;
+    /* Sit on top of the screen
+    z-index: 999;
+    /* Add a z-index if needed
+    left: 50%;
+    /* Center the snackbar
+    bottom: 30px;
+    /* 30px from the bottom
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript)
 #snackbar.show {
     visibility: visible;
     /* Show the snackbar */
     /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
-    However, delay the fade out process for 2.5 seconds */
+    However, delay the fade out process for 2.5 seconds
     -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
     animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
-/* Animations to fade the snackbar in and out */
+/* Animations to fade the snackbar in and out
 @-webkit-keyframes fadein {
     from {
         bottom: 0;
@@ -151,4 +173,4 @@ input {
         bottom: 0;
         opacity: 0;
     }
-}
+} */
