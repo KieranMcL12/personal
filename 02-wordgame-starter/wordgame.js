@@ -68,6 +68,7 @@ function changeGuess() {
     console.log(`Guess: "${guess}" and Secret: "${secret}"`);
     if (!isWord(guess)) {
         feedbackText.innerHTML = `"${guess}" is not a word.`;
+        feedbackFunc();
         // feedbackText.className = "show";
         // setTimeout(function () { feedbackText.className = feedbackText.className.replace("show", ""); }, 3000);
         guessField.value = "";
@@ -103,6 +104,20 @@ function submit() {
 
 function gameOver() {
     guessCount.style.color = "var(--warning-red)";
+}
+
+function feedbackFunc() {
+    // Get the snackbar DIV
+    var x = document.getElementById("snackbar");
+
+    // Set the snackbar content to the guess
+    x.innerHTML = "Not in word list";
+
+    // Add the "show" class to DIV
+    x.className = "show";
+
+    // After 3 seconds, remove the show class from DIV
+    setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
 }
 
 // TODO: write function isWord(word)
