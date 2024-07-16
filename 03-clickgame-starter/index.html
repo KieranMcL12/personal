@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="overlays.css">
+</head>
+
+<body>
+    <h1>Name...</h1>
+    <h2>Score: <span id="score">5</span></h2>
+    <div id="store-container">
+        <div class="store" name="Cheese" cost="5" reap="2" cooldown="0.5" text="Cheese"></div>
+        <div class="store" name="Mouse" cost="15" reap="10" cooldown="2.0" auto="true" locked="true" src="mouse.png"></div>
+        <div class="store" name="Super Mouse" cost="150" reap="100" cooldown="5.0" auto="true" locked="true"
+            src="StuartLittle.svg.png"></div>
+        <div class="store" name="Stinky Cheese" cost="1000" reap="1500" cooldown="8.0" auto="false" locked="true"
+            src="MickeyMouse.svg.png" onclick="playAudio()"></div>
+        <div class="store" name="Biggie Cheese" cost="10000" reap="300000" cooldown="15.0" auto="true" locked="true"
+            src="BiggieCheese.png"></div>
+        
+        <audio src="Mickey Mouse Laugh Sound Effect.mp3" id="MickeyMouseLaugh"></audio>
+    </div>
+    <div id="widget-container"></div>
+    <div id="auto-widget-container"></div>
+
+    <script src="game.js"></script>
+    <script src="load.js"></script>
+</body>
+
+</html>

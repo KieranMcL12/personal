@@ -1,0 +1,187 @@
+@font-face {
+    font-family: 'Fragua Bold';
+    src: url(fragua-font/FraguaBold.ttf);
+}
+
+:root {
+    --widget-width: 150px;
+    --widget-height: 150px;
+}
+
+* {
+    position: relative;
+}
+
+html,
+body {
+    cursor: default;
+}
+
+body {
+    font-family: 'Google Sans', Arial, Helvetica, sans-serif;
+    background-color: #FFC92B;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 25%;
+    background-color: #E8991A;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #FCB329;
+}
+
+h1,
+h2 {
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Fragua Bold';
+    font-size: xxx-large;
+    font-weight: 400;
+}
+
+#store-container {
+    border: 5px solid #E8991A;
+    border-radius: 5px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto 0 10px -5px;
+    background-color: #FCB329;
+}
+
+.store {
+    background-color: #FCB329;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+    margin: 5px;
+}
+
+.store:hover::before,
+.store:hover .widget::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    transition: all 0.2s ease;
+}
+
+.store p {
+    margin: 2px;
+}
+
+.store p:nth-of-type(1) {
+    font-weight: 600;
+}
+
+#widget-container {
+    border: 5px solid #E8991A;
+    border-radius: 5px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto 0 10px -5px;
+    background-color: #FCB329;
+}
+
+#auto-widget-container {
+    border: 5px solid #E8991A;
+    border-radius: 5px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto 0 10px -5px;
+    background-color: #FCB329;
+}
+
+#widget-container:empty,
+#auto-widget-container:empty {
+    display: none;
+}
+
+.widget {
+    height: var(--widget-height);
+    width: var(--widget-width);
+    max-height: var(--widget-height);
+    max-width: var(--widget-width);
+    margin: 5px;
+
+    cursor: pointer;
+
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex: 1 1 var(--widget-width);
+
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+/* If the widget is an automatic widget */
+.widget[auto="true"] {
+    background-color: #FCB329;
+    border: 3px solid #E8991A;
+    border-radius: 5px;
+}
+
+/* If the widget is a click widget */
+.widget:not([auto="true"]) {
+    background-color: #FFC92B;
+    border: 3px solid white;
+}
+
+.store[locked="true"] img {
+    filter: brightness(10%);
+}
+
+/* Widget with text */
+.widget p {
+    color: black;
+    font-size: larger;
+}
+
+/* Widget with image */
+.widget img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.widget[name="Cheese"] {
+    background-image: url(Cheese.jpg);
+    background-size: cover;
+}
+
+.widget[name="Stinky Cheese"] {
+    background-image: url(StinkyCheese.jpg);
+    background-size: cover;
+}
+
+/* Floating point indicator */
+.point {
+    position: absolute;
+    transform-origin: center;
+    color: white;
+    animation-name: point-float;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+@keyframes point-float {
+    100% {
+        opacity: 0%;
+        transform: translateY(-50px);
+    }
+}
