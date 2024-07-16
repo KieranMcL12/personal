@@ -1,0 +1,124 @@
+/* Fontanero */
+@font-face {
+    font-family: 'Fontanero';
+    src: url(fontanero/Fontanero-FFP.ttf);
+}
+
+@font-face {
+    font-family: 'Fontanero Bevel';
+    src: url(fontanero/Fontanero-Bevel-FFP.ttf);
+}
+
+/* Fragua */
+@font-face {
+    font-family: 'Fragua Bold';
+    src: url(fragua-font/FraguaBold.ttf);
+}
+
+@font-face {
+    font-family: 'Fragua Bold Italic';
+    src: url(fragua-font/FraguaBoldItalic.ttf);
+}
+
+@font-face {
+    font-family: 'Fragua Light';
+    src: url(fragua-font/FraguaLight.ttf);
+}
+
+@font-face {
+    font-family: 'Fragua Light Italic';
+    src: url(fragua-font/FraguaLightItalic.ttf);
+}
+
+/* Motion Control */
+@font-face {
+    font-family: 'Motion Control Bold';
+    src: url(motion-control/MotionControl-Bold.otf);
+}
+
+@font-face {
+    font-family: 'Motion Control Bold Italic';
+    src: url(motion-control/MotionControl-BoldItalic.otf);
+}
+
+/* Gotham */
+@font-face {
+    font-family: 'Gotham Black';
+    src: url(Gotham/GothamBlack.otf);
+}
+
+@font-face {
+    font-family: 'Gotham Bold';
+    src: url(Gotham/GothamBold.otf);
+}
+
+@font-face {
+    font-family: 'Gotham Bold Italic';
+    src: url(Gotham/GothamBoldItalic.ttf);
+}
+
+@font-face {
+    font-family: 'Gotham Book';
+    src: url(Gotham/GothamBook.otf);
+}
+
+@font-face {
+    font-family: 'Gotham Extra Light';
+    src: url(Gotham/GothamExtraLight.otf);
+}
+
+@font-face {
+    font-family: 'Gotham Extra Light Italic';
+    src: url(Gotham/GothamExtraLightItalic.otf);
+}
+
+@font-face {
+    font-family: 'Gotham Italic';
+    src: url(Gotham/GothamItalic.otf);
+}
+
+@font-face {
+    font-family: 'Gotham Italic Bold';
+    src: url(Gotham/GothamItalicBold.otf);
+}
+
+@font-face {
+    font-family: 'Gotham Light';
+    src: url(Gotham/GothamLight.otf);
+}
+
+@font-face {
+    font-family: 'Gotham Medium';
+    src: url(Gotham/GothamMedium.otf);
+}
+
+@font-face {
+    font-family: 'Gotham Regular';
+    src: url(Gotham/GothamRegular.otf);
+}
+
+@font-face {
+    font-family: 'Gotham Thin';
+    src: url(Gotham/GothamThin.otf);
+}
+
+@font-face {
+    font-family: 'Gotham Thin Italic';
+    src: url(Gotham/GothamThinItalic.otf);
+}
+
+@font-face {
+    font-family: 'Gotham Ultra';
+    src: url(Gotham/GothamUltra.otf);
+}
+
+h1,
+.project-title {
+    font-family: 'Fragua Bold';
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.site-desc {
+    font-family: 'Gotham Book';
+}
