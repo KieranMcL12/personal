@@ -122,3 +122,10 @@ h1,
 .site-desc {
     font-family: 'Gotham Book';
 }
+
+.project-number {
+    font-family: 'Motion Control Bold';
+    font-size: 23.5px;
+    font-weight: 400;
+    font-style: italic;
+}

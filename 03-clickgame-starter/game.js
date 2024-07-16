@@ -91,5 +91,5 @@ function showPoint(widget) {
 const Mickey = document.getElementById("MickeyMouseLaugh");
 
 function playAudio() {
-    Mickey.play;
+    Mickey.play();
 }

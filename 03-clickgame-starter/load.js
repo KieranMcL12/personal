@@ -22,7 +22,7 @@ for (let store of stores) {
     store.appendChild(priceTag);
 
     let reapTag = document.createElement("p");
-    reapTag.innerHTML = `+${store.getAttribute("reap")} sqft`;
+    reapTag.innerHTML = `+${store.getAttribute("reap")} cheese`;
     store.appendChild(reapTag);
 
     let cooldownTag = document.createElement("p");
