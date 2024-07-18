@@ -5,10 +5,63 @@
 	to generate your own customized menu buttons.
 */
 
+/*
+	tswnavbar.css	2.0.0
+	Please use the Navigation Menu Wizard at
+		https://www.thesitewizard.com/wizards/css-menu-buttons.shtml
+	to generate your own customized menu buttons.
+*/
+
 #tswcssbuttons {
-    width: 180px;
+    width: 200px;
     max-width: 100%;
-    text-align: center;
+    text-align: left;
+}
+
+#tswcssbuttons ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#tswcssbuttons li {
+    margin: 0;
+    padding: 4px 20px;
+    display: block;
+    list-style: none;
+    font-family: "Fragua Bold", Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 17px;
+    width: 200px;
+}
+
+#tswcssbuttons a {
+    color: #cccccc;
+    text-decoration: none;
+}
+
+#tswcssbuttons li:hover {
+    background-color: #2a2d2e;
+    cursor: pointer;
+}
+
+#tswcssbuttons li.active,
+#tswcssbuttons a li.active {
+    color: #fff;
+    background-color: #37373D;
+    font-size: 20px;
+}
+
+#tswcssbuttons a:active li,
+#tswcssbuttons a:active li.active {
+    color: #fff;
+    background-color: #37373D;
+}
+
+/* #tswcssbuttons {
+    width: 180px;
+    max-width: 50%;
+    text-align: left;
 }
 
 #tswcssbuttons ul {
@@ -27,17 +80,16 @@
 #tswcssbuttons li a {
     color: #CCCCCC;
     background-color: #252526;
-    border-left: 1px solid #585858;
     text-decoration: none;
     display: block;
-    padding: 4px 0;
+    padding: 4px 2px;
 }
 
 #tswcssbuttons li a:hover {
-    color: #cccccc;
-    background-color: #37373D;
+    color: #CCCCCC;
+    background-color: #2A2D2E;
 }
 
-#tswcssbuttons li a .active {
-    background-color: #04395E;
-}
+#tswcssbuttons li.active a {
+    background-color: #37373D;
+} */

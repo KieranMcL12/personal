@@ -119,6 +119,10 @@ h1,
     font-weight: 400;
 }
 
+#tswcontproper h1 {
+    font-size: 32.5px;
+}
+
 .site-desc {
     font-family: 'Gotham Book';
 }
